@@ -1,0 +1,251 @@
+
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+}
+
+body {
+  /* Основний темний фон */
+  background:
+    radial-gradient(
+      1200px 600px at 50% -200px,
+      rgba(125, 231, 255, 0.18),
+      rgba(0, 0, 0, 0) 60%
+    ),
+    linear-gradient(
+      135deg,
+      #05070c 0%,
+      #080b14 40%,
+      #0b0f1f 65%,
+      #0e0b18 100%
+    );
+
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color: #05070c;
+
+  color: #ffffff;
+  font-family: Inter, Arial, sans-serif;
+}
+
+.title{
+  font-size: 25px;
+  font-weight: 700;
+  color: #FFB86B;
+  letter-spacing: 0.05em;
+
+  display: inline-block;   /* КЛЮЧ */
+  position: relative;      /* КЛЮЧ */
+  top: -9px;               /* ПІДНЯТИ (постав -4 / -8 як треба) */
+  margin: 0;               /* прибрати все зайве */
+}
+.logo {
+  width: 42px;
+  height: 38;
+  object-fit: contain;
+}
+
+
+.top {
+    height: 70px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 0px;
+    
+    
+
+  /* базовий колір */
+    background: linear-gradient(
+    180deg,
+    rgba(18, 22, 26, 0.85),
+    rgba(10, 13, 16, 0.85)
+    );
+
+  /* ефект скла */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+  /* тонка лінія знизу */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+
+  /* легкий внутрішній блиск + тінь */
+    box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.04),
+    0 8px 30px rgba(0,0,0,0.6);
+}
+
+
+/* BURGER */
+.burger {
+    padding: 10%;
+  width: 26px;
+  height: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.burger span {
+  height: 3px;
+  width: 100%;
+  background: #7de7ff;
+  border-radius: 2px;
+}
+
+/* MOBILE MENU */
+.mobile-nav {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  right: 0;
+
+  background: rgba(5, 7, 12, 0.95);
+  backdrop-filter: blur(10px);
+
+  display: none;
+  flex-direction: column;
+  padding: 0px;
+}
+
+.mobile-nav a {
+  color: white;
+  text-decoration: none;
+  padding: 12px 0;
+  font-size: 16px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+/* ACTIVE */
+.mobile-nav.active {
+  display: flex;
+}
+
+
+
+
+
+.alt-mobile-scheme{ display:none; }
+
+
+
+.alt-mobile-scheme .node{
+  left: 50%;
+  top: var(--cy);
+  transform:
+    translate(-50%, -50%)
+    rotate(var(--a))
+    translate(var(--r))
+    rotate(var(--ai));
+}
+
+/* всі вузли ставимо від центру по колу */
+.alt-mobile-scheme .node{
+  left: 50%;
+  top: var(--cy);
+
+  transform:
+    translate(-50%, -50%)
+    rotate(var(--a))
+    translate(var(--r))
+    rotate(calc(var(--a) * -1));
+}
+
+
+
+  /* ЛІНІЇ */
+  .alt-mobile-scheme .alt-lines{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    pointer-events:none;
+    z-index: 1;
+  }
+  .alt-mobile-scheme .alt-lines line{
+    stroke: rgba(190, 230, 255, 0.22);
+    stroke-width: 1.2;
+    stroke-linecap: round;
+    filter: blur(0.2px);
+  }
+
+  /* ЦЕНТР ЛОГО */
+  .alt-mobile-scheme .center-logo{
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform:translate(-50%, -50%);
+    width:140px;
+    height:140px;
+    border-radius:999px;
+    display:grid;
+    place-items:center;
+    z-index: 2;
+
+    /* легке “світіння” */
+    background: rgba(0,0,0,0.18);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    box-shadow: 0 0 40px rgba(125,231,255,0.08);
+  }
+
+  .alt-mobile-scheme .logo-video,
+  .alt-mobile-scheme .logo-gif{
+    width: 110px;
+    height: 110px;
+    object-fit: contain;
+    border-radius: 999px;
+    filter: drop-shadow(0 0 18px rgba(255,170,60,0.18));
+  }
+
+  /* ВУЗЛИ */
+  .alt-mobile-scheme .node{
+    position:absolute;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:4px;
+    min-width:92px;
+    z-index: 3;
+    left: 50%;
+    top: var(--cy);
+
+  transform:
+  translate(-50%, -50%)
+  rotate(var(--a))
+  translate(var(--r))
+  rotate(var(--ai));
+  }
+
+  .alt-mobile-scheme .node-ico{
+    width:44px;
+    height:44px;
+    object-fit:contain;
+    opacity:0.95;
+    filter: drop-shadow(0 0 14px rgba(125,231,255,0.12));
+  }
+
+  .alt-mobile-scheme .node-text{
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    font-size:14px;
+    color: rgba(255,255,255,0.88);
+    background: rgba(0,0,0,0.15);
+    padding: 6px 10px;
+    border-radius: 12px;
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    white-space: nowrap;
+  }
+
+  /* ПОЗИЦІЇ */
+
+
+@media (max-width: 380px){
+  .alt-mobile-scheme{ height: 500px; }
+  .alt-mobile-scheme .center-logo{ width: 128px; height: 128px; }
+  .alt-mobile-scheme .logo-video,
+  .alt-mobile-scheme .logo-gif{ width: 100px; height: 100px; }
+  .alt-mobile-scheme .node-text{ font-size: 13px; }
+}

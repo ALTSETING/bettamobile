@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="mobile.css">
+
+    
+
+
+</head>
+<body>
+
+    
+<header class="top">
+  <div class="top-left">
+    <img src="img_m/logo bez fonu2.png" alt="ALTSETING logo" class="logo">
+    <span class="title">ALTSETING Token</span>
+  </div>
+
+  <!-- BURGER -->
+  <div class="burger" id="burger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</header>
+
+<!-- MOBILE MENU -->
+<nav class="mobile-nav" id="mobileNav">
+  <a href="#goals">Project Goals</a>
+  <a href="#academy">Rabbit IT</a>
+  <a href="#wallet">SetWallet</a>
+  <a href="#coming">Coming soon</a>
+  <a href="#nft">NFT</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+
+
+
+
+<section class="alt-mobile-scheme" aria-label="ALTSETING mobile scheme">
+
+  <!-- ЛІНІЇ -->
+  <svg class="alt-lines" viewBox="0 0 100 140" preserveAspectRatio="none" aria-hidden="true">
+    <line x1="50" y1="70" x2="20" y2="22" />
+    <line x1="50" y1="70" x2="80" y2="22" />
+
+    <line x1="50" y1="70" x2="14" y2="70" />
+    <line x1="50" y1="70" x2="86" y2="70" />
+
+    <line x1="50" y1="70" x2="18" y2="112" />
+    <line x1="50" y1="70" x2="82" y2="112" />
+  </svg>
+
+  <!-- ЦЕНТР: АНІМОВАНИЙ ЛОГО -->
+  <div class="center-logo" aria-label="ALTSETING animated logo">
+    <!-- Варіант A (рекомендую): відео -->
+    <video class="logo-video" autoplay muted loop playsinline>
+      <source src="img_m/altseting-logo.webm" type="video/webm">
+      <source src="img_m/animlogo.mp4" type="video/mp4">
+    </video>
+
+    <!-- Варіант B (якщо gif): просто заміни video на img
+    <img class="logo-gif" src="images/altseting-logo.gif" alt="ALTSETING logo" />
+    -->
+  </div>
+
+  <!-- ВУЗЛИ -->
+  <div class="node n-community" style="--a:-120deg; --ai:120deg;">
+  <img class="node-ico" src="img_m/imgcommunity.png" alt="Community icon" onerror="this.style.display='none'">
+  <div class="node-text">Community</div>
+  </div>
+
+  <div class="node n-business" style="--a:-60deg; --ai:60deg;">
+  <img class="node-ico" src="img_m/imgbusiness.png" alt="Business icon" onerror="this.style.display='none'">
+  <div class="node-text">Business</div>
+  </div>
+
+  <div class="node n-altpay" style="--a:180deg; --ai:-180deg;">
+  <img class="node-ico" src="img_m/imgaltpay.png" alt="ALT Pay icon" onerror="this.style.display='none'">
+  <div class="node-text">ALT Pay</div>
+  </div>
+
+  <div class="node n-airdrop" style="--a:0deg; --ai:0deg;">
+  <img class="node-ico" src="img_m/imgairdrop.png" alt="Airdrop icon" onerror="this.style.display='none'">
+  <div class="node-text">Airdrop</div>
+  </div>
+
+  <div class="node n-nft" style="--a:120deg; --ai:-120deg;">
+  <img class="node-ico" src="img_m/imgnft.png" alt="NFT icon" onerror="this.style.display='none'">
+  <div class="node-text">NFT</div>
+  </div>
+
+  <div class="node n-setwallet" style="--a:60deg; --ai:-60deg;">
+  <img class="node-ico" src="img_m/imgsetwallet.png" alt="SetWallet icon" onerror="this.style.display='none'">
+  <div class="node-text">SetWallet</div>
+</div>
+
+</section>
+
+
+<script>
+  const burger = document.getElementById("burger");
+  const menu = document.getElementById("mobileNav");
+
+  burger.addEventListener("click", () => {
+    menu.classList.toggle("active");
+  });
+</script>
+
+
+
+</body>
+</html>
